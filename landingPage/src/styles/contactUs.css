@@ -42,3 +42,90 @@ flex-direction: column;
 align-items: center;
 gap: 28px;
 }
+.contactText h1{
+color: #FFF;
+font-family: Lilita One;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.contactText p{
+color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.formDivElem{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 18px;
+}
+.inputDiv{
+display: flex;
+align-items: flex-start;
+gap: 18px;
+}
+.nameDiv{
+display: flex;
+width: 328px;
+padding: 15px;
+align-items: center;
+gap: 10px;
+border-radius: 5px;
+background: #C8D8EE;
+}
+
+.emailInput{
+flex: 1 0 0;
+color: #00061B;
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.textArea{
+display: flex;
+width: 674px;
+height: 100px;
+padding: 15px;
+align-items: flex-start;
+gap: 10px;
+border-radius: 5px;
+background: #C8D8EE;
+}
+.submit-button{
+display: flex;
+width: 386px;
+height: 45px;
+padding: 15px;
+align-items: center;
+gap: 10px;
+border-radius: 5px;
+background: #1F318D;
+}
+
+.nameInput{
+flex: 1 0 0;
+color: #00061B;
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.emailDiv{
+    display: flex;
+    width: 674px;
+    padding: 15px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: #C8D8EE;
+}

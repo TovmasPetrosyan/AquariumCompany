@@ -8,10 +8,10 @@ function createContactPage() {
     childDiv.appendChild(contactPageImage());
     const rightLayout =  document.createElement("div");
     rightLayout.setAttribute("class", "rightLayout");
-    const contactUsDiv =  document.createElement("div");
-    contactUsDiv.setAttribute("class", "contactText");
-    rightLayout.appendChild(contactUsDiv);
-    contactUsDiv.appendChild(contactText());
+    // const contactUsDiv =  document.createElement("div");
+    // contactUsDiv.setAttribute("class", "contactText");
+    rightLayout.appendChild(contactText());
+    // contactUsDiv.appendChild(contactText());
     const formDiv =  document.createElement("div");
     formDiv.setAttribute("class", "formDiv");
     rightLayout.appendChild(formDiv);
@@ -38,41 +38,63 @@ function contactPageImage(){
 
 function createContactForm (){
     const form = document.createElement('form');
-
+    const inputDiv = document.createElement('div');
+    inputDiv.setAttribute('class', 'inputDiv');
+    
     const nameInput = document.createElement('input');
     nameInput.setAttribute('type','text');
     nameInput.setAttribute('name','name');
     nameInput.setAttribute('placeholder','Name');
     nameInput.setAttribute('required', true);
+    nameInput.classList.add('nameInput');
+    const nameDiv = document.createElement('div');
+          nameDiv.appendChild(nameInput);
+          nameDiv.setAttribute('class', 'nameDiv');
+
 
     const surNameInput = document.createElement('input');
     surNameInput.setAttribute('type','text');
     surNameInput.setAttribute('name','surName');
     surNameInput.setAttribute('placeholder','Surname');
     surNameInput.setAttribute('required', true);
+    surNameInput.classList.add('nameInput');
+    const surNameDiv = document.createElement('div');
+          surNameDiv.appendChild(surNameInput);
+          surNameDiv.setAttribute('class', 'nameDiv');
 
+    inputDiv.appendChild(nameDiv);
+    inputDiv.appendChild(surNameDiv);
+
+    const emailDiv = document.createElement('div');
+    emailDiv.setAttribute('class', 'emailDiv');
     const emailInput = document.createElement('input');
     emailInput.setAttribute('type','email');
     emailInput.setAttribute('name','email');
     emailInput.setAttribute('placeholder','E-mail address');
     emailInput.setAttribute('required', true);
+    emailInput.classList.add('emailInput');    
+    emailDiv.appendChild(emailInput);
+    
 
 
     const messageTextarea = document.createElement('textarea');
           messageTextarea.setAttribute('name', 'message');
           messageTextarea.setAttribute('placeholder', 'Message');
-
+          messageTextarea.classList.add('textArea');
     const submitButton = document.createElement('button');
           submitButton.setAttribute('type', 'submit');
           submitButton.textContent = 'Send Message';
-    
-          form.appendChild(nameInput);
-          form.appendChild(surNameInput);
+          submitButton.classList.add('submit-button');
+         // form.appendChild(nameInput);
+         // form.appendChild(surNameInput);
+         form.appendChild(inputDiv);
           form.appendChild(emailInput);
           form.appendChild(messageTextarea);
           form.appendChild(submitButton);
-       
-         return form
+          const formDivElem = document.createElement('div');
+          formDivElem.setAttribute('class', 'formDivElem');
+          formDivElem.appendChild(form);
+         return formDivElem
 
 }
 
@@ -85,8 +107,8 @@ function contactText(){
     h1.textContent = `Contact Us`
     paragraph.textContent = "Got a question? We’d love to hear from you. Send us  a message and we’ll respond as soon as possible."
    
-    contactText.appendChild(h1)
-    contactText.appendChild(paragraph)
+    contactText.appendChild(h1);
+    contactText.appendChild(paragraph);
    
     return contactText
 }
