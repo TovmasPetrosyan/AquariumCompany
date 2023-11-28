@@ -1,0 +1,9 @@
+.idea
+node_modules
+dist
+*.log
+*.tmp
+.vscode/
+.idea/
+package-lock.json
+webpack.config.js
