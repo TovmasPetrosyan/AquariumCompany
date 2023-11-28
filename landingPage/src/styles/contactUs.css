@@ -4,3 +4,41 @@ padding: 142px 124.077px 150px 121px;
 justify-content: center;
 align-items: center;
 }
+.childDiv{
+display: flex;
+justify-content: space-between;
+align-items: center;
+border:1px solid red;
+}
+.container{
+ display: flex;
+flex-direction: column;
+align-items: center;
+gap: 28px;
+}
+
+.childDiv img{
+    width: 431.923px;
+    height: 410.914px;
+}
+
+.contactText{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 14px;
+color:#fff
+}
+
+.rightLayout{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 47px;
+}
+.formDiv{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 28px;
+}

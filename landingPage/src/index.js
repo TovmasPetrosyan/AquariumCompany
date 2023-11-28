@@ -1,6 +1,7 @@
 import "./styles/navStyle.css"
 import "./styles/mainStyle.css"
 import "./styles/headerStyle.css"
+import "./styles/contactUs.css"
 import createHomePage from "./scripts/createHomePage"
 import createNav from "./scripts/navScript"
 import createMain from "./scripts/mainScript"
