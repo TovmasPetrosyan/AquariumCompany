@@ -1,0 +1,164 @@
+.contact-us {
+  display: inline-flex;
+  padding: 142px 124.077px 150px 121px;
+  justify-content: center;
+  align-items: center;
+}
+.childDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+.childDiv img {
+  width: 431.923px;
+  height: 410.914px;
+}
+
+
+.rightLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 47px;
+}
+.contactText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: #fff;
+}
+
+
+.contactText h1 {
+  color: #fff;
+  font-family: Lilita One;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.contactText p {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.formDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.formDivElem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.inputDiv {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.nameInput {
+  display: flex;
+  width: 326px;
+  padding: 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #c8d8ee;
+  border: none;
+}
+.emailDiv {
+  display: flex;
+  width: 700px;
+  padding: 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #c8d8ee;
+ 
+}
+
+.emailInput {
+  display: flex;
+  width: 700px;
+  padding: 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #c8d8ee;
+  border: none;
+}
+.textArea  {
+  display: flex;
+  width: 700px;
+  height: 100px;
+  padding: 15px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 5px;
+  background: #c8d8ee;
+}
+.submit-button { 
+
+width: 386px;
+height: 45px;
+padding: 15px;
+margin-top: 18px;
+color:#fff;
+border-radius: 5px;
+background: #1F318D;
+border: none;
+}
+.submitDiv {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  height: 45px;
+ 
+}
+
+
+@media only screen and (max-width: 768px) {
+  .contact-us {
+    flex-direction: row;
+    padding: 50px;
+  }
+
+  .childDiv {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .childDiv img {
+    width: 100%;
+    height: auto;
+  }
+  .rightLayout {   
+    width: 100%;
+  }
+
+  .formDivElem,
+  .submitDiv {
+    width: 100%;
+  }
+
+  .nameInput,
+  .emailInput,
+  .textArea {
+    width: 100%;
+  }
+}
