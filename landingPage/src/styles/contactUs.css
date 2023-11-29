@@ -102,7 +102,7 @@
   background: #c8d8ee;
   border: none;
 }
-.textArea {
+.textArea  {
   display: flex;
   width: 700px;
   height: 100px;
@@ -131,3 +131,34 @@ border: none;
  
 }
 
+
+@media only screen and (max-width: 768px) {
+  .contact-us {
+    flex-direction: row;
+    padding: 50px;
+  }
+
+  .childDiv {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .childDiv img {
+    width: 100%;
+    height: auto;
+  }
+  .rightLayout {   
+    width: 100%;
+  }
+
+  .formDivElem,
+  .submitDiv {
+    width: 100%;
+  }
+
+  .nameInput,
+  .emailInput,
+  .textArea {
+    width: 100%;
+  }
+}

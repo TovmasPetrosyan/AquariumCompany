@@ -43,6 +43,7 @@ function createContactForm (){
     nameInput.setAttribute('name','name');
     nameInput.setAttribute('placeholder','Name');
     nameInput.setAttribute('required', true);
+    nameInput.setAttribute('autocomplete', 'off');
     nameInput.classList.add('nameInput');
    
 
@@ -52,6 +53,7 @@ function createContactForm (){
     surNameInput.setAttribute('name','surName');
     surNameInput.setAttribute('placeholder','Surname');
     surNameInput.setAttribute('required', true);
+    surNameInput.setAttribute('autocomplete', 'off')
     surNameInput.classList.add('nameInput');
     
 
@@ -64,6 +66,7 @@ function createContactForm (){
     emailInput.setAttribute('name','email');
     emailInput.setAttribute('placeholder','E-mail address');
     emailInput.setAttribute('required', true);
+    emailInput.setAttribute('autocomplete', 'off')
     emailInput.classList.add('emailInput');    
   
     
