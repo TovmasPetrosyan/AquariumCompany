@@ -13,6 +13,9 @@ function createMain(){
     main.appendChild(fishes())
     main.appendChild(contactUs())
     document.body.appendChild(modal())
+    
+    
+   
     return main
 }
 

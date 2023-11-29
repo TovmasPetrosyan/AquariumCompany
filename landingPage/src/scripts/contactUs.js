@@ -36,6 +36,7 @@ function contactPageImage(){
 
 function createContactForm (){
     const form = document.createElement('form');
+          form.setAttribute("class", "contact-form")
     const inputDiv = document.createElement('div');
     inputDiv.setAttribute('class', 'inputDiv');
     
