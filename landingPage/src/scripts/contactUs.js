@@ -58,29 +58,28 @@ function createContactForm (){
     inputDiv.appendChild(nameInput);
     inputDiv.appendChild(surNameInput);
 
-   // const emailDiv = document.createElement('div');
-   // emailDiv.setAttribute('class', 'emailDiv');
+  
     const emailInput = document.createElement('input');
     emailInput.setAttribute('type','email');
     emailInput.setAttribute('name','email');
     emailInput.setAttribute('placeholder','E-mail address');
     emailInput.setAttribute('required', true);
     emailInput.classList.add('emailInput');    
-   // emailDiv.appendChild(emailInput);
+  
     
 
 
-    const messageTextarea = document.createElement('textarea');
+    const messageTextarea = document.createElement('textarea');         
           messageTextarea.setAttribute('name', 'message');
           messageTextarea.setAttribute('placeholder', 'Message');
           messageTextarea.classList.add('textArea');
-         // const textareaDiv = document.createElement('div');
-         // textareaDiv.setAttribute('class', 'textareaDiv');
-         // textareaDiv.appendChild(messageTextarea);
+         
+         
 
     const submitButton = document.createElement('button');
           submitButton.setAttribute('type', 'submit');
-          submitButton.textContent = 'Send Message';
+        //  submitButton.textContent = 'Send Message';
+          submitButton.innerHTML = '<i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Send Message'
           submitButton.classList.add('submit-button');
           
           const parentDiv = document.createElement('div');
@@ -98,7 +97,7 @@ function createContactForm (){
           form.appendChild(formDivElem);
           form.appendChild(parentDiv);
          
-         // formDivElem.appendChild(form);
+         
          return form
 
 }
