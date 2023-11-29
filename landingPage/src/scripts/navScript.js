@@ -1,3 +1,15 @@
+function smoothScrollTo(targetId) {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+     console.log("Smooth scrolling to:", targetId)
+      targetElement.scrollIntoView({
+        behavior: 'smooth'
+      });
+    } else {
+        console.log("Element not found:", targetId);
+      }
+  }
+
 function createNav () {
     const nav = document.createElement("nav");
     nav.setAttribute("class", "nav")
@@ -7,22 +19,41 @@ function createNav () {
     rootMenu.appendChild( createUl())
     rootMenu.appendChild(registerNow())
     nav.appendChild(rootMenu)
+
+    nav.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') {
+          event.preventDefault();
+            var targetId = event.target.getAttribute('href').substring(1);
+         smoothScrollTo(targetId.toLowerCase());
+        }
+      });
+
     return nav
 }
 
 function createUl (){
     const ulForNav = document.createElement("ul");
     ['Home', 'Products', 'About Us', 'Contact'].forEach(item => {
-        ulForNav.appendChild(createLi(item))
+        ulForNav.appendChild(createLi(item));
     });
-    return ulForNav
+    return ulForNav;
 }
 
 function createLi(item){
     const liForNav = document.createElement("li");
-    liForNav.setAttribute("class", item.toLowerCase());
-    liForNav.textContent = item;
-    return liForNav
+    const aForNav = document.createElement("a");
+    const targetId = "#" + item.toLowerCase();
+    aForNav.setAttribute("href",  targetId)
+    aForNav.textContent = item;
+
+    aForNav.addEventListener('click', function (event) {
+        event.preventDefault();
+        var targetId = event.target.getAttribute('href').substring(1);
+        smoothScrollTo(targetId.toLowerCase());
+      });
+
+    liForNav.appendChild(aForNav);
+    return liForNav;
 }
 
 function logo (){
@@ -38,3 +69,4 @@ function registerNow (){
 }
 
 export default createNav
+export { smoothScrollTo, createLi }
