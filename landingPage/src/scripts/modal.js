@@ -6,7 +6,7 @@ function createModal(){
    
     const modal = document.createElement("div");
           modal.setAttribute("class", "modal");
-          modalWrap.appendChild(modal);
+         
     const img = document.createElement("img"); 
           img.setAttribute("src",modalImg);
     const par1 = document.createElement("p");
@@ -22,6 +22,7 @@ function createModal(){
           modal.appendChild(par1);
           modal.appendChild(par2);
           modal.appendChild(button);
+          modalWrap.appendChild(modal);
 
     return modalWrap
 }
