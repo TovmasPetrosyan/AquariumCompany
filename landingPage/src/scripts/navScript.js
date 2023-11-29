@@ -33,7 +33,7 @@ function createNav () {
 
 function createUl (){
     const ulForNav = document.createElement("ul");
-    ['Home', 'Products', 'AboutUs', 'Contact'].forEach(item => {
+    ['Home', 'Products', 'About Us', 'Contact'].forEach(item => {
         ulForNav.appendChild(createLi(item));
     });
     return ulForNav;
