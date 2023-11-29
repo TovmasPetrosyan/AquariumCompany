@@ -112,6 +112,9 @@
   border-radius: 5px;
   background: #c8d8ee;
 }
+.submit-button:hover{
+  background: #25409b; 
+}
 .submit-button { 
 
 width: 386px;
@@ -122,6 +125,7 @@ color:#fff;
 border-radius: 5px;
 background: #1F318D;
 border: none;
+transition: background 0.3s ease;
 }
 .submitDiv {
   display: flex;
