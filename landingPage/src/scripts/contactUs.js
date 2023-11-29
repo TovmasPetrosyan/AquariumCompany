@@ -1,17 +1,14 @@
-import contactImage from "../image/Group3.png";
+import contactImage from "../image/Group1.png";
 
 function createContactPage() {
-    const contactUs =  document.createElement("section");
+    const contactUs =  document.createElement("div");
     contactUs.setAttribute('class','contact-us');
     const childDiv =  document.createElement("div");
     childDiv.setAttribute("class", "childDiv");
     childDiv.appendChild(contactPageImage());
     const rightLayout =  document.createElement("div");
-    rightLayout.setAttribute("class", "rightLayout");
-    // const contactUsDiv =  document.createElement("div");
-    // contactUsDiv.setAttribute("class", "contactText");
+    rightLayout.setAttribute("class", "rightLayout");    
     rightLayout.appendChild(contactText());
-    // contactUsDiv.appendChild(contactText());
     const formDiv =  document.createElement("div");
     formDiv.setAttribute("class", "formDiv");
     rightLayout.appendChild(formDiv);
@@ -47,9 +44,7 @@ function createContactForm (){
     nameInput.setAttribute('placeholder','Name');
     nameInput.setAttribute('required', true);
     nameInput.classList.add('nameInput');
-    const nameDiv = document.createElement('div');
-          nameDiv.appendChild(nameInput);
-          nameDiv.setAttribute('class', 'nameDiv');
+   
 
 
     const surNameInput = document.createElement('input');
@@ -58,22 +53,20 @@ function createContactForm (){
     surNameInput.setAttribute('placeholder','Surname');
     surNameInput.setAttribute('required', true);
     surNameInput.classList.add('nameInput');
-    const surNameDiv = document.createElement('div');
-          surNameDiv.appendChild(surNameInput);
-          surNameDiv.setAttribute('class', 'nameDiv');
+    
 
-    inputDiv.appendChild(nameDiv);
-    inputDiv.appendChild(surNameDiv);
+    inputDiv.appendChild(nameInput);
+    inputDiv.appendChild(surNameInput);
 
-    const emailDiv = document.createElement('div');
-    emailDiv.setAttribute('class', 'emailDiv');
+   // const emailDiv = document.createElement('div');
+   // emailDiv.setAttribute('class', 'emailDiv');
     const emailInput = document.createElement('input');
     emailInput.setAttribute('type','email');
     emailInput.setAttribute('name','email');
     emailInput.setAttribute('placeholder','E-mail address');
     emailInput.setAttribute('required', true);
     emailInput.classList.add('emailInput');    
-    emailDiv.appendChild(emailInput);
+   // emailDiv.appendChild(emailInput);
     
 
 
@@ -81,20 +74,32 @@ function createContactForm (){
           messageTextarea.setAttribute('name', 'message');
           messageTextarea.setAttribute('placeholder', 'Message');
           messageTextarea.classList.add('textArea');
+         // const textareaDiv = document.createElement('div');
+         // textareaDiv.setAttribute('class', 'textareaDiv');
+         // textareaDiv.appendChild(messageTextarea);
+
     const submitButton = document.createElement('button');
           submitButton.setAttribute('type', 'submit');
           submitButton.textContent = 'Send Message';
           submitButton.classList.add('submit-button');
-         // form.appendChild(nameInput);
-         // form.appendChild(surNameInput);
-         form.appendChild(inputDiv);
-          form.appendChild(emailInput);
-          form.appendChild(messageTextarea);
-          form.appendChild(submitButton);
-          const formDivElem = document.createElement('div');
+          
+          const parentDiv = document.createElement('div');
+          parentDiv.setAttribute('class', 'submitDiv');
+          parentDiv.appendChild(submitButton);
+          
+         
+         
+        
+         const formDivElem = document.createElement('div');
           formDivElem.setAttribute('class', 'formDivElem');
-          formDivElem.appendChild(form);
-         return formDivElem
+          formDivElem.appendChild(inputDiv);
+          formDivElem.appendChild(emailInput);
+          formDivElem.appendChild(messageTextarea);
+          form.appendChild(formDivElem);
+          form.appendChild(parentDiv);
+         
+         // formDivElem.appendChild(form);
+         return form
 
 }
 

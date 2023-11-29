@@ -1,131 +1,133 @@
-.contact-us{
-display: inline-flex;
-padding: 142px 124.077px 150px 121px;
-justify-content: center;
-align-items: center;
+.contact-us {
+  display: inline-flex;
+  padding: 142px 124.077px 150px 121px;
+  justify-content: center;
+  align-items: center;
 }
-.childDiv{
-display: flex;
-justify-content: space-between;
-align-items: center;
-border:1px solid red;
-}
-.container{
- display: flex;
-flex-direction: column;
-align-items: center;
-gap: 28px;
+.childDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
-.childDiv img{
-    width: 431.923px;
-    height: 410.914px;
+
+.childDiv img {
+  width: 431.923px;
+  height: 410.914px;
 }
 
-.contactText{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 14px;
-color:#fff
+
+.rightLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 47px;
+}
+.contactText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: #fff;
 }
 
-.rightLayout{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 47px;
-}
-.formDiv{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 28px;
-}
-.contactText h1{
-color: #FFF;
-font-family: Lilita One;
-font-size: 48px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+
+.contactText h1 {
+  color: #fff;
+  font-family: Lilita One;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.contactText p{
-color: #FFF;
-text-align: center;
-font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-.formDivElem{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 18px;
-}
-.inputDiv{
-display: flex;
-align-items: flex-start;
-gap: 18px;
-}
-.nameDiv{
-display: flex;
-width: 328px;
-padding: 15px;
-align-items: center;
-gap: 10px;
-border-radius: 5px;
-background: #C8D8EE;
+.contactText p {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.emailInput{
-flex: 1 0 0;
-color: #00061B;
-font-family: Inter;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.formDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
 }
-.textArea{
-display: flex;
-width: 674px;
-height: 100px;
-padding: 15px;
-align-items: flex-start;
-gap: 10px;
-border-radius: 5px;
-background: #C8D8EE;
+
+.formDivElem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
 }
-.submit-button{
-display: flex;
+.inputDiv {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.nameInput {
+  display: flex;
+  width: 326px;
+  padding: 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #c8d8ee;
+  border: none;
+}
+.emailDiv {
+  display: flex;
+  width: 700px;
+  padding: 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #c8d8ee;
+ 
+}
+
+.emailInput {
+  display: flex;
+  width: 700px;
+  padding: 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #c8d8ee;
+  border: none;
+}
+.textArea {
+  display: flex;
+  width: 700px;
+  height: 100px;
+  padding: 15px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 5px;
+  background: #c8d8ee;
+}
+.submit-button { 
+
 width: 386px;
 height: 45px;
 padding: 15px;
-align-items: center;
-gap: 10px;
+margin-top: 18px;
+color:#fff;
 border-radius: 5px;
 background: #1F318D;
+border: none;
+}
+.submitDiv {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  height: 45px;
+ 
 }
 
-.nameInput{
-flex: 1 0 0;
-color: #00061B;
-font-family: Inter;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-.emailDiv{
-    display: flex;
-    width: 674px;
-    padding: 15px;
-    align-items: center;
-    gap: 10px;
-    border-radius: 5px;
-    background: #C8D8EE;
-}
