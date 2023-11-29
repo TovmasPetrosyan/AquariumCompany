@@ -4,8 +4,9 @@ import companyName  from "./createNamCompany";
 import contactUs from "./contactUs";
 
 function createMain(){
-    const main = document.createElement("mian");
+    const main = document.createElement("main");
     main.setAttribute("class", "main")
+    main.setAttribute("id", "products")
     main.appendChild(companyName())
     main.appendChild(aquariumImage())
     main.appendChild(fishes())

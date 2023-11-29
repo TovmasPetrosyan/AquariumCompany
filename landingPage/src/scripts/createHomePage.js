@@ -4,12 +4,12 @@ function createHomePage() {
     const header =  document.createElement("header")
     const headerDiv =  document.createElement("div")
     header.setAttribute("class", "header")
+    header.setAttribute("id", "home")
     headerDiv.setAttribute("class", "headerDiv")
     headerDiv.appendChild(homeText())
     headerDiv.appendChild(homePageImage())
     header.appendChild(headerDiv)
     return header
-    
 }
 
 function homePageImage(){
