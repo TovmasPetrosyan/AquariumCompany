@@ -2,7 +2,7 @@ import contactImage from "../image/Group1.png";
 
 function createContactPage() {
     const contactUs =  document.createElement("div");
-    contactUs.setAttribute('id','contact us');
+    contactUs.setAttribute('id','contact');
     contactUs.setAttribute('class','contact-us');
     const childDiv =  document.createElement("div");
     childDiv.setAttribute("class", "childDiv");
