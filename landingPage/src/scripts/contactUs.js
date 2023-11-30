@@ -1,4 +1,7 @@
 import contactImage from "../image/Group1.png";
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore'
+
 
 function createContactPage() {
     const contactUs =  document.createElement("div");
@@ -24,8 +27,20 @@ function createContactPage() {
 }
 
 
-
-
+const firebaseConfig = {
+    apiKey: "AIzaSyDa2nDjCwnDMaN5Nq0wOo2eOWVBUZ14stU",
+    authDomain: "first-project-b37b0.firebaseapp.com",
+    databaseURL: "https://first-project-b37b0-default-rtdb.firebaseio.com",
+    projectId: "first-project-b37b0",
+    storageBucket: "first-project-b37b0.appspot.com",
+    messagingSenderId: "456167382831",
+    appId: "1:456167382831:web:b3c70858f691866c618bda",
+    measurementId: "G-X9402W6CXY"
+  };
+  
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  
 
 
 function contactPageImage(){
@@ -101,7 +116,26 @@ function createContactForm (){
           formDivElem.appendChild(messageTextarea);
           form.appendChild(formDivElem);
           form.appendChild(parentDiv);
-         
+          
+
+          form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+        
+            const formData = new FormData(form);
+            const data = {};
+        
+            formData.forEach((value, key) => {
+              data[key] = value;
+            });
+          try {
+                       
+              await addDoc(collection(db,'contact-form'),data);
+              form.reset();
+              console.log('Data sent to Firebase successfully!');
+            } catch (error) {
+              console.error('Error sending data to Firebase:', error);
+            }
+          });
          
          return form
 
