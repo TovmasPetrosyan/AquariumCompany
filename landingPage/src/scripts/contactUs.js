@@ -116,12 +116,13 @@ function createContactForm (){
           formDivElem.appendChild(messageTextarea);
           form.appendChild(formDivElem);
           form.appendChild(parentDiv);
-          
-
+         
+    
           form.addEventListener('submit', async (event) => {
             event.preventDefault();
         
             const formData = new FormData(form);
+            const modal = document.querySelector(".modal-wrap");
             const data = {};
         
             formData.forEach((value, key) => {
@@ -131,12 +132,13 @@ function createContactForm (){
                        
               await addDoc(collection(db,'contact-form'),data);
               form.reset();
+              modal.classList.toggle("display-none");
               console.log('Data sent to Firebase successfully!');
             } catch (error) {
               console.error('Error sending data to Firebase:', error);
             }
           });
-         
+        
          return form
 
 }
