@@ -1,6 +1,8 @@
 *{
     margin : 0px;
     padding : 0px;
+    overflow-x: hidden;
+
 }
 
 .header {
@@ -16,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    weight : 100%;
+    width : 100%;
     padding: 80px;
 }
 
