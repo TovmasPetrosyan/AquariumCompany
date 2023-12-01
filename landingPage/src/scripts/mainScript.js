@@ -3,7 +3,7 @@
 
 import { setRandomPosition } from "./move.js";
 import { Fish, BadFish } from "./createFish.js";
-
+import contactUs from './contactUs.js'
 import fish1 from "../image/fish1.png";
 import fish2 from "../image/fish2.png";
 import fish3 from "../image/fish3.png";
@@ -85,15 +85,6 @@ function getRandomIndex(arr) {
 
 
 
-function createMain(){
-    const main = document.createElement("main");
-    main.setAttribute("class", "main")
-    main.setAttribute("id", "products")
-    main.appendChild(companyName())
-    main.appendChild(aquariumImage())
-    main.appendChild(fishes())
-    main.appendChild(contactUs())
-    return main
 
 }
 
@@ -224,8 +215,8 @@ function createMain() {
   main.appendChild(resetAqua);
 
   main.appendChild(fishSection);
-
-  return main;
+  main.appendChild(contactUs())
+ return main
 }
 
 export default createMain;

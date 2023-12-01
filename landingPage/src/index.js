@@ -1,14 +1,14 @@
-
-import "./styles/navStyle.css"
-import "./styles/mainStyle.css"
-import "./styles/headerStyle.css"
-import "./styles/contactUs.css"
-import '@fortawesome/fontawesome-free/css/all.css';
-import createHomePage from "./scripts/createHomePage"
-import createNav from "./scripts/navScript"
-import createMain from "./scripts/mainScript"
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import '@fortawesome/fontawesome-free/css/all.css';
+import "./styles/navStyle.css";
+import "./styles/mainStyle.css";
+import "./styles/headerStyle.css";
+import "./styles/contactUs.css";
+import "./styles/aquaStyle.css"
+import createHomePage from "./scripts/createHomePage";
+import createNav from "./scripts/navScript";
+import createMain from "./scripts/mainScript";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -31,10 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
+  });
+});
 
   
-
-
+  
+  
 const firebaseConfig = {
     apiKey: "AIzaSyDa2nDjCwnDMaN5Nq0wOo2eOWVBUZ14stU",
     authDomain: "first-project-b37b0.firebaseapp.com",
@@ -49,4 +51,5 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-
+  
+  
