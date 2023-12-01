@@ -83,18 +83,6 @@ function changeHeaderColor() {
 function getRandomIndex(arr) {
   return Math.floor(Math.random() * arr.length);
 
-
-
-function createMain(){
-    const main = document.createElement("main");
-    main.setAttribute("class", "main")
-    main.setAttribute("id", "products")
-    main.appendChild(companyName())
-    main.appendChild(aquariumImage())
-    main.appendChild(fishes())
-    main.appendChild(contactUs())
-    return main
-
 }
 
 window.addEventListener("load", () => {
