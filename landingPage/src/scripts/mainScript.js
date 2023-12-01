@@ -1,9 +1,5 @@
-
-
-
 import { setRandomPosition } from "./move.js";
 import { Fish, BadFish } from "./createFish.js";
-import contactUs from './contactUs.js'
 import fish1 from "../image/fish1.png";
 import fish2 from "../image/fish2.png";
 import fish3 from "../image/fish3.png";
@@ -28,7 +24,6 @@ resetAqua.appendChild(resetBtn);
 let count = 0;
 let toggleButton = document.createElement("button");
 toggleButton.setAttribute("id", "toggleFishMenu");
-
 
 let fishSection = document.createElement("section");
 fishSection.className = "select-fish";
@@ -65,27 +60,23 @@ resetAqua.appendChild(toggleButton);
 resetAqua.appendChild(resetBtn);
 
 let rotation = 0;
-    
 
-    function rotateImage() {
-      rotation += 180;
-      toggleButton.style.transform = `rotate(${rotation}deg)`;
-    }
+function rotateImage() {
+  rotation += 180;
+  toggleButton.style.transform = `rotate(${rotation}deg)`;
+}
 
 function changeHeaderColor() {
-    const brightColors = ["#ff5252", "#ff9800", "#4caf50", "#2196f3", "#9c27b0"];
-    const randomColor = brightColors[Math.floor(Math.random() * brightColors.length)];
+  const brightColors = ["#ff5252", "#ff9800", "#4caf50", "#2196f3", "#9c27b0"];
+  const randomColor =
+    brightColors[Math.floor(Math.random() * brightColors.length)];
 
-    gameHeader.style.color = randomColor;
-  }
-  setInterval(changeHeaderColor, 1000);
+  gameHeader.style.color = randomColor;
+}
+setInterval(changeHeaderColor, 1000);
 
 function getRandomIndex(arr) {
   return Math.floor(Math.random() * arr.length);
-
-
-
-
 }
 
 window.addEventListener("load", () => {
@@ -116,7 +107,7 @@ setInterval(function () {
   clickableDivs.forEach(function (fish) {
     setRandomPosition(aquariumSection, fish);
   });
-}, 5000);
+}, 8000);
 
 fishes.forEach(function (elem) {
   elem.addEventListener("click", function () {
@@ -167,6 +158,8 @@ badFish.addEventListener("click", () => {
       clickableDivs = clickableDivs.filter((fish) => fish !== overlappingFish);
 
       newBad.increaseSize();
+      setRandomPosition(aquariumSection, newBad.fish);
+
     });
   }
 
@@ -176,7 +169,7 @@ badFish.addEventListener("click", () => {
     aquariumSection.appendChild(newBad.fish);
   }
   setRandomPosition(aquariumSection, newBad.fish);
-
+  
   function animate() {
     detectCollisions();
     requestAnimationFrame(animate);
@@ -184,26 +177,31 @@ badFish.addEventListener("click", () => {
 
   animate();
 });
+// resetBtn.addEventListener("mousedown", () => {
+//   resetBtn.classList.add("click-animation");
+//   aquariumSection.innerHTML = "";
+//   clickableDivs.length = 0;
+//   count = 0;
+// });
 
-resetBtn.addEventListener("mousedown", () => {
-  resetBtn.classList.add("click-animation");
-  aquariumSection.innerHTML = "";
-  clickableDivs.length = 0;
-  count = 0;
-});
+// resetBtn.addEventListener("mouseup", () => {
+//   resetBtn.classList.remove("click-animation");
+// });
 
-resetBtn.addEventListener("mouseup", () => {
-  resetBtn.classList.remove("click-animation");
-});
-
-resetBtn.addEventListener("mouseleave", () => {
-  resetBtn.classList.remove("click-animation");
-});
+// resetBtn.addEventListener("mouseleave", () => {
+//   resetBtn.classList.remove("click-animation");
+// });
 
 toggleButton.addEventListener("click", function () {
-    rotateImage()
+  rotateImage();
   fishMenu.style.display = countForMenu % 2 === 0 ? "none" : "flex";
   countForMenu++;
+});
+
+let rotationAngle = 0;
+resetBtn.addEventListener("click", function () {
+  rotationAngle += 360;
+  resetBtn.style.transform = `rotate(${rotationAngle}deg)`;
 });
 
 function createMain() {
@@ -215,8 +213,7 @@ function createMain() {
   main.appendChild(resetAqua);
 
   main.appendChild(fishSection);
-  main.appendChild(contactUs())
- return main
+  return main;
 }
 
 export default createMain;

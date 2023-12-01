@@ -25,7 +25,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  transition: transform 5s ease;
+  transition: transform 5s ease,  scaleX 0.5s ease;
 }
 
 .fish img {
@@ -47,8 +47,8 @@
 }
 
 .fish-bad img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 
 .fish:hover {
@@ -56,6 +56,7 @@
 }
 
 .select-fish {
+  margin-top: 50px;
   transition: 1s;
   display: none;
   justify-content: space-around;
@@ -81,13 +82,22 @@
   padding: 10px;
 }
 
+.bad{
+  background-color: red;
+}
 .reset-aquarium {
+  overflow: hidden; 
+
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  padding: 20px;
+ 
 }
 
 .reset-aquarium img {
+  overflow-x: hidden;
+
+  transition: 0.5s;
   width: 100px;
   height: 100px;
 }
@@ -106,9 +116,11 @@
 }
 
 #toggleFishMenu {
+  overflow-x: hidden;
+  margin-right:20px ;
   transition: transform 0.5s; 
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border: none;
   border-radius: 50%;
   padding: 10px 15px;

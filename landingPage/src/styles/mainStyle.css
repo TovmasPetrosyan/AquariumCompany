@@ -1,5 +1,6 @@
 .main{
- 
+    height: 100vh;
+    overflow: hidden; 
     padding-bottom: 150px;
     
     background: var(--background2, linear-gradient(180deg, #000517 0%, #010E41 100%));
