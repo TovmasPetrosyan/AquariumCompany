@@ -11,12 +11,18 @@ function smoothScrollTo(targetId) {
   }
 
 function createNav () {
-    const nav = document.createElement("nav");
+    const nav = document.createElement("nav")
     nav.setAttribute("class", "nav")
     nav.append(logo())
+    const burgerMenu = document.createElement("i")
+    burgerMenu.setAttribute("class", "fa-solid fa-bars")
+    const burgerMenuButton = document.createElement("div")
+    burgerMenuButton.setAttribute('class', 'burger-icon')
+    burgerMenuButton.append(burgerMenu)
     const rootMenu = document.createElement("div")
     rootMenu.setAttribute("class", "rootMenu")
     rootMenu.appendChild( createUl())
+    rootMenu.append(burgerMenuButton)
     rootMenu.appendChild(registerNow())
     nav.appendChild(rootMenu)
 
@@ -70,3 +76,13 @@ function registerNow (){
 
 export default createNav
 export { smoothScrollTo, createLi }
+
+export function openMenu() {
+  document.querySelector('.burger-icon').addEventListener('click', () => {
+    const menu = document.querySelector('.rootMenu ul')
+    if (menu) {
+      menu.classList.toggle('active')
+    }
+  })
+  
+}

@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { openMenu } from "./scripts/navScript"
+
 import '@fortawesome/fontawesome-free/css/all.css';
 import "./styles/navStyle.css";
 import "./styles/mainStyle.css";
@@ -9,7 +11,6 @@ import "./styles/aquaStyle.css"
 import createHomePage from "./scripts/createHomePage";
 import createNav from "./scripts/navScript";
 import createMain from "./scripts/mainScript";
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -31,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
+    openMenu();
   });
 });
 
-  
   
   
 const firebaseConfig = {
@@ -51,5 +52,3 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-  
-  
