@@ -24,7 +24,7 @@ function createModal(){
           modal.appendChild(button);
           modalWrap.appendChild(modal);
           button.addEventListener("click", ()=>{
-           modalWrap.classList.toggle("display-none");
+          modalWrap.classList.toggle("display-none");
           })
           
     return modalWrap

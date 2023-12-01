@@ -37,12 +37,12 @@ p:nth-child(2){
     color:#fff;
     border-radius: 5px;
     border: none;
-    &:hover{
-        border-color: #25409b;
-        background: #25409b;     
-    }
+   
    
 }
 .display-none{
     display: none;
+}
+.btn:hover{
+  background: #25409b;
 }

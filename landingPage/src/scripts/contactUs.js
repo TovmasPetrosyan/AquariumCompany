@@ -1,6 +1,6 @@
 import contactImage from "../image/Group1.png";
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore'
+import { getFirestore, collection, addDoc } from 'firebase/firestore'
 
 
 function createContactPage() {
