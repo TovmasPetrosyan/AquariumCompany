@@ -25,6 +25,7 @@
     height: 600px;
     flex-shrink: 0;
     fill: #9AFFFA;
+    position: relative;
 }
 
 .homeText {
